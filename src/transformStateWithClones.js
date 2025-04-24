@@ -39,7 +39,7 @@ function transformStateWithClones(initialState, actions) {
         throw new Error(`Unknown action type: ${action.type}`);
     }
 
-    history.push(currentState);
+    history.push({ ...currentState });
   }
 
   return history;
